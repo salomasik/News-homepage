@@ -1,0 +1,111 @@
+@import "./mixins.scss";
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include breakpoint(xs){
+    width: 340px;
+
+    }
+
+
+    .icon-menu{
+        cursor: pointer;
+        display: none;
+        @include breakpoint(xs){
+            display: flex;
+            height: 20px;
+        
+            }
+    }
+
+    .nav{
+        padding: 10px 0px;
+        @include breakpoint(xs){
+            display: none;
+        
+            }
+        ul{
+            display: flex;
+            gap: 40px;
+
+
+            .nav-li{
+
+
+                text-decoration: none;
+                list-style: none;
+
+                
+                a{
+                    color: $Dark-grayish-blue;
+                    text-decoration: none;
+
+                }
+                a:hover{
+                    color: $Soft-red;
+                }
+                
+            }
+        }
+    }
+
+
+    
+        .nav-mobile-wrapper{
+            display: none;
+            position: fixed;
+            min-width: 100%;
+            min-height: 100%;
+            left: 0px;
+            top: 0px;
+            .dark-fone{
+                background-color:rgba($color: $Very-dark-blue, $alpha: .575);
+                width: 30%;
+            }
+        
+            .nav-mobile{
+                display: grid;
+                padding: 5%;
+                width: 70%;
+                background-color: $Off-white;
+                grid-template-rows: 35px;
+                gap: 90px;
+                
+                img{
+                    align-self: end;
+                    justify-self: end
+                }
+                
+                ul{
+                    font-size: 20px;
+                    align-self: start;
+                    justify-self: start;
+                    .nav-li{
+
+                        margin-bottom: 30px;
+                        text-decoration: none;
+                        list-style: none;
+        
+                        
+                        a{
+                            color: $Very-dark-blue;
+                            text-decoration: none;
+        
+                        }
+                        a:hover{
+                            color: $Soft-red;
+                        }
+                        
+                    }
+                }
+            
+            }
+        }
+    
+    
+
+}

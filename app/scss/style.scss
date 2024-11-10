@@ -1,0 +1,90 @@
+@import "./variables.scss";
+@import "./components/aside.scss";
+@import "./components/footer.scss";
+@import "./components/header.scss";
+@import "./components/main.scss";
+@import "./mixins.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $FF;
+    img{
+        display: inline-block;
+    }
+}
+
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+
+.wrapper{
+    margin: 2.5%;
+    width: 1110px;
+    height: 805px;
+
+    @include breakpoint(xs){
+        width: 340px;
+        height: max-content; 
+        margin: 10% 2.5%;
+
+    }
+}
+
+
+a{
+    text-decoration: none;
+}
+.log{
+    width: 40px;
+    height: 65px;
+}
+
+.article-parag{
+    color: $Dark-grayish-blue;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.article-parag-1{
+    color: $Grayish-blue;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.readMore-btn{
+    cursor: pointer;
+width: 185px;
+height: 50px;
+background-color: $Soft-red;
+border: 0px;
+color: $Very-dark-blue;
+font-size: 13px;
+font-weight: bold;
+
+letter-spacing: 5px;
+padding: 15px 30px;
+}
+
+.readMore-btn:hover{
+    color: $Off-white;
+    background-color: $Very-dark-blue;
+}
+
+hr{
+    color: $Dark-grayish-blue;
+    border: 1px solid $Dark-grayish-blue;
+}
+
+
+
+.nav-mobile-wrapper.active{
+    display: flex;
+    
+
+}
